@@ -2,6 +2,39 @@
 @tailwind components;
 @tailwind utilities;
 
-body {
-  @apply font-kumbhsans;
+@layer base {
+  :root {
+    --background: 210 22% 96%;
+    --foreground: 219 29% 14%;
+
+    --card: 0 0% 100%;
+    --muted: 214 17% 51%;
+
+    --primary: 235 69% 61%;
+    --secondary: 0 0% 100%;
+  }
+
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+
+    --card: 219 29% 14%;
+    --muted: 212 23% 69%;
+
+    --primary-foreground: 240 5.9% 10%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground font-kumbh;
+  }
+}
+
+.list-counter li {
+  counter-increment: count 1;
+  @apply before:content-[counter(count)];
 }
