@@ -12,6 +12,8 @@
 
     --primary: 235 69% 61%;
     --secondary: 0 0% 100%;
+
+    --btn: 235 69% 61%;
   }
 
   .dark {
@@ -22,6 +24,7 @@
     --muted: 212 23% 69%;
 
     --primary-foreground: 240 5.9% 10%;
+    --btn: 0 0% 100%;
   }
 }
 
@@ -37,4 +40,8 @@
 .list-counter li {
   counter-increment: count 1;
   @apply before:content-[counter(count)];
+}
+
+.header-image {
+  @apply absolute inset-0 object-cover w-full h-full;
 }

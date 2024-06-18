@@ -20,11 +20,11 @@ const JobList = () => {
 
   return (
     <section className='pb-16'>
-      <div className='grid gap-[50px]'>
+      <div className='grid gap-[50px] sm:grid-cols-2 sm:gap-x-3 lg:gap-x-[30px] lg:gap-y-[65px] xl:grid-cols-3'>
         {jobs.slice(0, displayJobs).map((job) => {
           return (
             <article key={job.id} className='relative bg-card'>
-              <Link href={`/job/${job.id}`} className='px-8 pt-[48px] pb-8 block'>
+              <Link href={`/job/${job.id}`} className='h-full px-8 pt-[48px] pb-8 block'>
                 <div
                   className='absolute rounded-[15px] w-[50px] h-[50px] -top-[25px]'
                   style={{ backgroundColor: job.logoBackground }}
@@ -37,7 +37,7 @@ const JobList = () => {
                     className='absolute w-auto h-auto top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2'
                   />
                 </div>
-                <div className='grid gap-10'>
+                <div className='grid gap-10 h-full'>
                   <div className='flex flex-col gap-1'>
                     <p className='flex gap-3 items-baseline text-muted'>
                       <span>{job.postedAt}</span>
@@ -47,7 +47,7 @@ const JobList = () => {
                     <h2 className='text-foreground text-md font-bold'>{job.position}</h2>
                     <p className='text-muted'>{job.company}</p>
                   </div>
-                  <h3 className='text-primary font-bold text-sm'>{job.location}</h3>
+                  <h3 className='text-primary font-bold text-sm self-end'>{job.location}</h3>
                 </div>
               </Link>
             </article>

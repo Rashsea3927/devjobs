@@ -10,6 +10,13 @@ const config = {
   ],
   prefix: '',
   theme: {
+    screens: {
+      xs: '540px',
+      sm: '640px',
+      md: '768px',
+      lg: '1024px',
+      xl: '1280px',
+    },
     container: {
       center: true,
       padding: '2rem',
@@ -25,6 +32,13 @@ const config = {
       xl: '1.75rem',
     },
     extend: {
+      maxWidth: {
+        xs: '492px',
+        sm: '592px',
+        md: '689px',
+        lg: '980px',
+        xl: '1110px',
+      },
       fontFamily: {
         kumbh: ['var(--font-kumbh-sans)'],
       },
@@ -34,6 +48,7 @@ const config = {
         ring: 'hsl(var(--ring))',
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
+        btn: 'hsl(var(--btn-background))',
         primary: {
           DEFAULT: 'hsl(var(--primary))',
           foreground: 'hsl(var(--primary-foreground))',
@@ -62,6 +77,9 @@ const config = {
           DEFAULT: 'hsl(var(--card))',
           foreground: 'hsl(var(--card-foreground))',
         },
+      },
+      scale: {
+        '200': '2',
       },
       keyframes: {
         'accordion-down': {
